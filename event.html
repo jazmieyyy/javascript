@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Event Click</title>
+ <script>
+	function onLoadEvent(){
+		alert("The page has finished loading!");
+	}
+
+	function onClickEvent(){
+		alert("The elememt was clicked!");
+	}
+
+	function onSubmitEvent(){
+		alert("The form was submitted!");
+	}
+
+	function onBlurEvent(){
+		alert("The element lost focus");
+	}
+
+	function onChangeEvent(){
+		alert("The value of the element has changed!");
+	}
+</script>
+</head> 
+<body onload="onLoadEvent()">
+	<h1 align="center"> Event Example </h1>
+	<form onsubmit="onSubmitEvent()">
+		<input type="text" id="load" onblur="onBlurEvent()"
+		onchange="onChangeEvent()">
+		<input type="submit" value="Submit">
+	</form>
+	<button onclick="onClickEvent()"> Click Me </button>
+</body>
+</html>                 

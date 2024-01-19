@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Classification</title>  
+</head>
+<body>
+<h2>Enter the number to check whether it's Perfect, Abundant or Deficient</h2>
+<form name="form1">
+	<input type="text" name="number" />
+	<input type="button" value="Calculate" onClick="check();" />
+</form>
+    <script>
+        function check() {
+	    var n = document.form1.number.value;
+            var sum = 0;
+            for (var i=1; i<n; i++) {
+                if (n % i === 0)
+                    sum += i;
+            }
+
+            if (sum == n) {
+                alert(n + " is a perfect number.");
+            } else if (sum > n){
+                alert(n + " is an abundant number.");
+            } else {
+                alert(n + " is a deficient number.");
+            }
+        }
+    </script>
+</body>
+</html>
